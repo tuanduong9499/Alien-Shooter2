@@ -29,7 +29,7 @@ class BulletPlane{
             let aliens = this.game.aliens
             if(this.game.collision(this.bulletPlaneSprite, aliens[i].alienSprite)){
                 this.game.gameBoard.scores ++;
-                if(this.game.gameBoard.scores == 20){
+                if(this.game.gameBoard.scores == 2){
                     this.game.bossAlien.drawBoss();
                     this.game.bossAlien.update();
                     this.game.bossAlien.drawLevelUpText();
@@ -50,7 +50,7 @@ class BulletPlane{
         setInterval(() =>{
             this.move();
             this.collision(); 
-            if(this.game.gameBoard.scores >= 20){
+            if(this.game.gameBoard.scores >= 2){
                 this.collisionWithBoss()
             }
         },20)

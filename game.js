@@ -76,8 +76,8 @@ class Game{
             }
     }
     collisionBoss(first, second){
-        if(first.x > second.x - 70 && first.x < second.x -70 + second.width - 50&&
-            first.y > second.y && first.y < second.y  + second.height - 40){
+        if(first.x > second.x - 50 && first.x < second.x -50 + second.width &&
+            first.y > second.y && first.y < second.y  + second.height - 20){
                 return true;
             }
     }

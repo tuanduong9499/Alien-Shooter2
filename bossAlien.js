@@ -13,9 +13,9 @@ class BossAlien{
             this.textures.push(this.texture);
         }
         this.animatedBossSprite = new PIXI.AnimatedSprite(this.textures);
-        this.animatedBossSprite.y = 100
-        this.animatedBossSprite.width = 200;
-        this.animatedBossSprite.height = 200; 
+        this.animatedBossSprite.y = 50;
+        this.animatedBossSprite.width = 100;
+        this.animatedBossSprite.height = 100; 
         this.animatedBossSprite.anchor.set(0.5,0.5)
 
         this.levelUpText = new PIXI.Text("LEVEL 2", {fontSize : 30, fill : 0xffffff});
@@ -40,11 +40,11 @@ class BossAlien{
     }
     fireBullet(){
         this.bulletBoss = new BulletAlien(this.game);
-        this.bulletBoss.bulletAlienSprite.x = this.animatedBossSprite.x - 50;
+        this.bulletBoss.bulletAlienSprite.x = this.animatedBossSprite.x - 30;
         this.bulletBoss.bulletAlienSprite.y = this.animatedBossSprite.y ;
 
         this.bulletBoss2 = new BulletAlien(this.game);
-        this.bulletBoss2.bulletAlienSprite.x = this.animatedBossSprite.x + 50;
+        this.bulletBoss2.bulletAlienSprite.x = this.animatedBossSprite.x + 30;
         this.bulletBoss2.bulletAlienSprite.y = this.animatedBossSprite.y ;
     }
     update(){
